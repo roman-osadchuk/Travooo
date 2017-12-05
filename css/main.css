@@ -1,0 +1,208 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main_container {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/main/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+/*************** Sign Up *****************/
+
+.modal-dialog {
+  width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-dialog {
+    margin: 10vh auto;
+  }
+}
+
+.modal-content {
+  padding-bottom: 30px;
+}
+
+.modal_inner_container {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+.modal_logo {
+  margin: 15px 0px;
+}
+
+.modal_logo > img {
+  display: block;
+  margin: 0 auto;
+}
+
+.under_signIn_logo {
+  text-align: center;
+}
+
+.under_signIn_logo > span:nth-child(1){
+  display: block;
+  padding-top: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.under_signIn_logo > span:nth-child(2){
+  display: block;
+  padding-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+.under_signIn_logo > span:nth-child(3){
+  display: block;
+  padding-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+#signIn_form {
+
+}
+
+.signIn_text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.signIn_text > input {
+  padding: 10px;
+}
+
+.signIn_text > input[type=text]:nth-child(1) {
+  width: 74%;
+}
+
+.signIn_text> input[type=text]:nth-child(2) {
+  width: 25%;
+}
+
+.alert_border {
+  border-color: red;
+  box-shadow: 0 0 1px red;
+}
+
+.signIn_radio {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.signIn_radio > div {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.signIn_radio > div > label {
+  padding-left: 3px;
+  font-weight: 300;
+}
+
+.signIn_radio + button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.button_back {
+  text-align: center;
+}
+
+.term_policy {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.term_policy > span:nth-child(1) {
+  font-size: 12px;
+  color: #999;
+}
+
+.term_policy > b,
+.term_policy > a {
+  font-size: 12px;
+  color: #666;
+}
+
+.term_policy > a {
+  color: #58f;
+}
+
+.term_policy + div {
+  width: 90%;
+  margin: 20px auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.already_a_member {
+  display: block;
+  margin: 20px auto;
+  font-size: 16px;
+  color: #333;
+}
+
+.already_a_member + button {
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+/*************** -Sign Up- *****************/
+
+
+
+
+/*************** Get started *****************/
+
+
+.get_started {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************* -Get started- ***************/

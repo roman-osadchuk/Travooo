@@ -1,0 +1,107 @@
+
+<html class="no-js" lang="">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="css/main.css">
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+      <script src="js/vendor/bootstrap.min.js"></script>
+      <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+
+      <div id="main_container">
+
+        <div class="container">
+
+          <!-- Modal -->
+          <div class="modal fade" id="SignUpModal" role="dialog" data-backdrop="static">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+
+                <div class="modal_inner_container">
+                  <div class="modal_logo">
+                    <img src="img/main/logo.png" alt="logo"/>
+                  </div>
+
+                  <div class="under_signIn_logo">
+                    <span>Create free account</span>
+                    <span id="validation_propmpt">write a text here</span>
+                    <span>emailhere@gmail.com</span>
+                  </div>
+
+                  <form id="signIn_form" name="signInForm" >
+
+                    <div class="signIn_text">
+                      <input type="text" name="signIn_full_name" id="signIn_full_name" placeholder="Full Name" value="" />
+                      <input type="text" name="signIn_age" id="signIn_age" placeholder="Age" value="" />
+                    </div>
+
+                    <div class="signIn_radio">
+                      <div>
+                        <input type="radio" name="signIn_radio" id="male" value="male" />
+                        <label for="male">Male</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="signIn_radio" id="female" value="female" />
+                        <label for="female">Female</label>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                  </form>
+
+                  <div class="button_back">
+                    <span>Back</span>
+                  </div>
+
+                  <div class="term_policy">
+                    <span>Creating an account means you're okay with</span>
+                    <br />
+                    <b>Travooo's </b><a href="#">Term of Service, Privacy Policy</a>
+                  </div>
+
+                  <div></div>
+
+
+                  <span class="already_a_member">Already a member?</span>
+
+                  <button class="btn btn-default">Log In</button>
+                </div>
+
+              </div>
+              <!-- Modal content-->
+
+            </div>
+          </div>
+          <!-- Modal -->
+
+
+        </div>
+
+
+
+      <!-- Main Container -->
+      </div>
+
+      <div id="get_started">
+        get started
+      </div>
+
+
+
+      <script src="js/main.js"></script>
+    </body>
+</html>
