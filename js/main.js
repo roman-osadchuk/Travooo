@@ -138,6 +138,7 @@
   document.getElementById('get_started_button').addEventListener('click', function(e) {
     $('#GET_STARTED_CONTAINER').css('display', 'none');
     $('#main_container').css('display', 'block');
+    renderImages();
   });
 
 
@@ -145,7 +146,17 @@
 
   $("#SelectiveModal_1").modal("show");
 
+  //console.log(cities_or_countries);
 
+  function renderImages() {
+    const div = document.createElement('div');
+    div.setAttribute('class','image_box');
+    const img = document.createElement('img');
+    img.setAttribute('class','image_box');
+
+  }
+
+  renderImages();
 
 
 
