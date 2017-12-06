@@ -9,19 +9,24 @@
   padding: 0;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 #main_container {
+  display: block;
   width: 100%;
   height: 100%;
   background-image: url("../img/main/background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 10;
 }
 
 
 
-
-/*************** Sign Up *****************/
+/*************** Modal Base *****************/
 
 .modal-dialog {
   width: 400px;
@@ -43,8 +48,6 @@
   text-align: center;
 }
 
-
-
 .modal_logo {
   margin: 15px 0px;
 }
@@ -54,31 +57,172 @@
   margin: 0 auto;
 }
 
-.under_signIn_logo {
-  text-align: center;
-}
-
-.under_signIn_logo > span:nth-child(1){
+.create_free_account {
   display: block;
+  margin: 0 auto;
   padding-top: 5px;
   font-size: 20px;
   font-weight: 600;
   color: #333;
 }
 
-.under_signIn_logo > span:nth-child(2){
+/*************** *Content* *****************/
+/*******************************************/
+/*************** *Content* *****************/
+
+.stripe {
+  width: 90%;
+  margin: 20px auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.already_a_member {
+  display: block;
+  margin: 20px auto;
+  font-size: 16px;
+  color: #333;
+}
+
+.already_a_member + button {
+  width: 80%;
+}
+
+
+/*************** -Modal Base- *****************/
+
+
+/*************** Sign Up 1 *****************/
+
+#SIGN_UP_1 {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.validation_propmpt {
+  display: block;
+  margin: 0 auto;
+  padding-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+#signIn_form_1 {
+  width: 100%;
+}
+
+.signIn_text_1 {
+  width: 100%;
+}
+
+.signIn_text_1 > input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px auto;
+  font-size: 16px;
+}
+
+.signIn_text_1 + button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.or {
+  display: block;
+  margin: 0 auto;
+  padding: 7px 0px;
+  font-size: 14px;
+  color: #666;
+}
+
+#login_with_facebook {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#login_with_facebook > i {
+  display: inline-block;
+  width: 10%;
+  padding: 10px;
+  background-color: #46f;
+  color: #fff;
+}
+
+#login_with_facebook > span {
+  display: inline-block;
+  width: 90%;
+  padding: 10px;
+  background-color: #67f;
+  color: #fff;
+}
+
+#login_with_twitter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#login_with_twitter > i {
+  display: inline-block;
+  width: 10%;
+  padding: 10px;
+  background-color: #21A0CE;
+  color: #fff;
+}
+
+#login_with_twitter > span {
+  display: inline-block;
+  width: 90%;
+  padding: 10px;
+  background-color: #23C4E0;
+  color: #fff;
+}
+
+.term_policy {
+  width: 80%;
+  margin: 20px auto 0px;
+  text-align: center;
+}
+
+.term_policy > span:nth-child(1) {
+  font-size: 12px;
+  color: #999;
+}
+
+.term_policy > b,
+.term_policy > a {
+  font-size: 12px;
+  color: #666;
+}
+
+.term_policy > a {
+  color: #58f;
+}
+
+
+/*************** -Sign Up 1- *****************/
+
+
+/*************** Sign Up 2 *****************/
+
+#SIGN_UP_2 {
+  display: none;
+}
+
+.validation_propmpt {
   display: block;
   padding-top: 5px;
   font-size: 12px;
   color: #999;
 }
 
-.under_signIn_logo > span:nth-child(3){
-  display: block;
-  padding-top: 5px;
-  font-size: 14px;
-  color: #666;
-}
 
 #signIn_form {
 
@@ -129,72 +273,193 @@
   margin: 10px 0;
 }
 
-.button_back {
+#button_back {
   text-align: center;
 }
 
-.term_policy {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.term_policy > span:nth-child(1) {
-  font-size: 12px;
-  color: #999;
-}
-
-.term_policy > b,
-.term_policy > a {
-  font-size: 12px;
-  color: #666;
-}
-
-.term_policy > a {
-  color: #58f;
-}
-
-.term_policy + div {
-  width: 90%;
-  margin: 20px auto;
-  border-bottom: 1px solid #ccc;
-}
-
-.already_a_member {
-  display: block;
-  margin: 20px auto;
-  font-size: 16px;
-  color: #333;
-}
-
-.already_a_member + button {
-  width: 80%;
-}
 
 
 
 
 
-
-
-
-
-
-/*************** -Sign Up- *****************/
-
+/*************** -Sign Up 2- *****************/
 
 
 
 /*************** Get started *****************/
 
 
-.get_started {
+#GET_STARTED_CONTAINER {
   display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.logo_header {
+  margin-top: 15px;
+}
+
+.logo_header > img {
+  display: block;
+  margin: 0 auto;
+}
+
+.getStarted_content {
+  display: none;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .getStarted_content {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .getStarted_content {
+    flex-direction: column-reverse;
+  }
+}
+
+.getStarted_content > div:nth-child(1) {
+
+}
+
+.getStarted_content > div:nth-child(1) > h2 {
+
+}
+
+.getStarted_content > div:nth-child(1) > span {
+  display: block;
+  padding-bottom: 10px;
+  line-height: 1.5;
+}
+
+.getStarted_content > div:nth-child(1) > button {
+  margin-top: 15px;
+}
+
+.getStarted_content > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.getStarted_content > div:nth-child(2) > img {
+
+}
+
+@media screen and (max-width: 768px) {
+  .getStarted_content > div:nth-child(2) > img {
+    margin: 20px auto;
+  }
+}
+
+
+/************* -Get started- ***************/
+
+
+/*************** Steps Base *****************/
+
+#top_header_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 100;
+}
+
+#top_header_fixed > div {
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  #top_header_fixed > div {
+    width: 90%;
+  }
+}
+
+#top_header_fixed > div > div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+#top_header_fixed > div > div:first-child > img {
+  display: block;
+}
+
+#top_header_fixed > div > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top_header_fixed > div > div:last-child > span:first-of-type {
+  display: block;
+  margin-right: 10px;
+}
+
+#top_header_fixed > div > div:last-child > span:last-of-type {
+  display: block;
+  margin-left: 10px;
+}
+
+#progress_container {
+  width: 360px;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+#progress_bar {
+  width: 60px;
+  height: 12px;
+  border-radius: 5px;
+  background-color: blue;
 }
 
 
 
 
+/************** -Steps Base- ****************/
+
+
+
+/********* Sevective Modals Base *********/
+
+#SelectiveModal_1 .modal-dialog {
+  width: 600px;
+}
+
+
+
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
 
 
 
@@ -205,4 +470,10 @@
 
 
 
-/************* -Get started- ***************/
+
+
+
+
+
+
+/********** -Sevective Modals Base- ***********/

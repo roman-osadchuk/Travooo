@@ -1,5 +1,5 @@
 
-<html class="no-js" lang="">
+<html>
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -8,6 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+      <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/bootstrap-theme.min.css">
       <link rel="stylesheet" href="css/main.css">
@@ -25,7 +26,7 @@
         <div class="container">
 
           <!-- Modal -->
-          <div class="modal fade" id="SignUpModal" role="dialog" data-backdrop="static">
+          <div class="modal fade" id="SignUpModalStep1" role="dialog" data-backdrop="static">
             <div class="modal-dialog">
 
               <!-- Modal content-->
@@ -36,44 +37,85 @@
                     <img src="img/main/logo.png" alt="logo"/>
                   </div>
 
-                  <div class="under_signIn_logo">
-                    <span>Create free account</span>
-                    <span id="validation_propmpt">write a text here</span>
-                    <span>emailhere@gmail.com</span>
-                  </div>
+                  <span class="create_free_account">Create free account</span>
 
-                  <form id="signIn_form" name="signInForm" >
+                  <!-- Content -->
 
-                    <div class="signIn_text">
-                      <input type="text" name="signIn_full_name" id="signIn_full_name" placeholder="Full Name" value="" />
-                      <input type="text" name="signIn_age" id="signIn_age" placeholder="Age" value="" />
+                  <!-- Sign Un 1 -->
+                  <div id="SIGN_UP_1">
+
+                    <span class="validation_propmpt">write a text here</span>
+
+                    <form id="signIn_form_1" name="signInForm_1" >
+
+                      <div class="signIn_text_1">
+                        <input type="text" name="signIn_email" id="signIn_email" placeholder="Email Adress" value="" />
+                        <input type="password" name="signIn_password" id="signIn_password" placeholder="Password" value="" />
+                      </div>
+
+                      <button type="submit" id="signUp_continue" class="btn btn-success">Continue</button>
+                    </form>
+
+                    <span class="or">Or</span>
+
+                    <a href="#" id="login_with_facebook">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                      <span>Continue with Facebook</span>
+                    </a>
+
+                    <a href="#" id="login_with_twitter">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <span>Continue with Twitter</span>
+                    </a>
+
+                    <div class="term_policy">
+                      <span>Creating an account means you're okay with</span>
+                      <br />
+                      <b>Travooo's </b><a href="#">Term of Service, Privacy Policy</a>
                     </div>
 
-                    <div class="signIn_radio">
-                      <div>
-                        <input type="radio" name="signIn_radio" id="male" value="male" />
-                        <label for="male">Male</label>
+                  </div>
+                  <!-- -Sign Un 1- -->
+
+                  <!-- Sign Un 2 -->
+                  <div id="SIGN_UP_2">
+
+                    <form id="signIn_form_2" name="signInForm_2" >
+
+                      <div class="signIn_text">
+                        <input type="text" name="signIn_full_name" id="signIn_full_name" placeholder="Full Name" value="" />
+                        <input type="text" name="signIn_age" id="signIn_age" placeholder="Age" value="" />
                       </div>
-                      <div>
-                        <input type="radio" name="signIn_radio" id="female" value="female" />
-                        <label for="female">Female</label>
+
+                      <div class="signIn_radio">
+                        <div>
+                          <input type="radio" name="signIn_radio" id="male" value="male" />
+                          <label for="male">Male</label>
+                        </div>
+                        <div>
+                          <input type="radio" name="signIn_radio" id="female" value="female" />
+                          <label for="female">Female</label>
+                        </div>
                       </div>
+
+                      <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+
+                    <div id="button_back">
+                      <span>Back</span>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Sign In</button>
-                  </form>
+                    <div class="term_policy">
+                      <span>Creating an account means you're okay with</span>
+                      <br />
+                      <b>Travooo's </b><a href="#">Term of Service, Privacy Policy</a>
+                    </div>
 
-                  <div class="button_back">
-                    <span>Back</span>
                   </div>
 
-                  <div class="term_policy">
-                    <span>Creating an account means you're okay with</span>
-                    <br />
-                    <b>Travooo's </b><a href="#">Term of Service, Privacy Policy</a>
-                  </div>
+                  <!-- -Content- -->
 
-                  <div></div>
+                  <div class="stripe"></div>
 
 
                   <span class="already_a_member">Already a member?</span>
@@ -88,7 +130,6 @@
           </div>
           <!-- Modal -->
 
-
         </div>
 
 
@@ -96,9 +137,97 @@
       <!-- Main Container -->
       </div>
 
-      <div id="get_started">
-        get started
+
+      <!-- Get Started -->
+      <div id="GET_STARTED_CONTAINER">
+        <div class="logo_header">
+          <img src="img/main/logo.png" alt="logo"/>
+        </div>
+
+        <div class="getStarted_content">
+          <div>
+            <h2>Welcome to travooo Amine!</h2>
+
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Perferendis iste reprehenderit, nisi.
+            </span>
+            <span>
+              Incidunt, et fugit atque dolor maxime officiis soluta.
+              Iste cupiditate iusto, hic assumenda, minima laborum facere enim officiis.
+            </span>
+
+            <button class="btn btn-primary btn-lg" id="get_started_button">
+              Get Started!
+            </button>
+          </div>
+          <div>
+            <img src="img/main/persons.png" alt="persons"/>
+          </div>
+        </div>
       </div>
+      <!-- -Get Started- -->
+
+
+      <div id="top_header_fixed">
+        <div>
+          <div>
+            <img src="img/main/logo.png" alt="logo"/>
+          </div>
+
+              </div>
+            </div>
+            <span>Finish</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Selecting Modals -->
+      <div class="SELECTING_MODAL">
+
+        <div class="container">
+
+          <!-- The Modal -->
+          <div class="modal fade" id="SelectiveModal_1" data-backdrop="static">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="selecting_modal_header">
+                  <div>
+                    <span class="smh_text">
+                      Select at least 5 favorive
+                    </span>
+                    <span class="smh_underline_text">
+                      countries or cities
+                    </span>
+                  </div>
+                  <div>
+                    <span>Step 1 of 6</span>
+                  </div>
+                </div>
+
+                <div class="inner-addon left-addon" id="search_container">
+                  <i class="glyphicon glyphicon-search"></i>
+                  <input type="text" class="form-control" placeholder="Country or city..."/>
+                </div>
+
+                <div class="image_container">
+                  <div class="image_box">
+                    
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- The Modal -->
+
+        </div>
+
+      </div>
+      <!-- -Selecting Modals- -->
+
+
 
 
 

@@ -1,9 +1,64 @@
+//import { cities_or_countries } from "../images_data/countries_or_cities/data.json";
+
 (function() {
   $( document ).ready(function() {
 
-    $("#SignUpModal").modal("show");
+    //$("#SignUpModalStep1").modal("show");
 
   });
+
+  document.getElementById('signIn_form_1').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (validateSignUp1Form()) {
+      $('#SIGN_UP_1').css('display', 'none');
+      $('#SIGN_UP_2').css('display', 'block');
+    }
+  });
+
+  let user_email,
+      user_password;
+
+  function validateSignUp1Form() {
+    let isValid = true;
+    const form = document.forms["signInForm_1"];
+    user_email = form["signIn_email"].value;
+    user_password = form["signIn_password"].value;
+
+    user_email === ""
+    ?
+    (
+      $('#signIn_email').addClass('alert_border'),
+      $('.validation_propmpt').html('please fill the required fields'),
+      isValid = false
+    )
+    :
+    (
+      $('#signIn_email').removeClass('alert_border'),
+      isValid = true
+    )
+
+
+    user_password === ""
+    ?
+    (
+      $('#signIn_password').addClass('alert_border'),
+      $('.validation_propmpt').html('please fill the required fields'),
+      isValid = false
+    )
+    :
+    (
+      $('#signIn_password').removeClass('alert_border'),
+      isValid = true
+    )
+
+    return isValid
+  }
+
+
+
+
+
 
   let signInFullName,
       age,
@@ -12,9 +67,9 @@
 
 
 
-  function validateForm() {
+  function validateSignUp2Form() {
     let isValid = true;
-    const form = document.forms["signInForm"];
+    const form = document.forms["signInForm_2"];
     signInFullName = form["signIn_full_name"].value;
     age = form["signIn_age"].value;
     gender = form["signIn_radio"].value;
@@ -64,23 +119,31 @@
   }
 
 
-  document.getElementById('signIn_form').addEventListener('submit', function(e) {
+  document.getElementById('signIn_form_2').addEventListener('submit', function(e) {
     e.preventDefault();
-    if(validateForm()) {
-      console.log('valid!!!!!');
+    if(validateSignUp2Form()) {
       $('#main_container').css('display', 'none');
-      $('#get_started').css('display', 'block');
+      $('#GET_STARTED_CONTAINER').css('display', 'flex');
     } else {
       console.log('invalid(((((');
     }
+  });
 
+  document.getElementById('button_back').addEventListener('click', function(e) {
+    $('#SIGN_UP_2').css('display', 'none');
+    $('#SIGN_UP_1').css('display', 'block');
   });
 
 
+  document.getElementById('get_started_button').addEventListener('click', function(e) {
+    $('#GET_STARTED_CONTAINER').css('display', 'none');
+    $('#main_container').css('display', 'block');
+  });
 
 
+  //************* Modals
 
-
+  $("#SelectiveModal_1").modal("show");
 
 
 
