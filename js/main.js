@@ -138,8 +138,10 @@
   document.getElementById('get_started_button').addEventListener('click', function(e) {
     $('#GET_STARTED_CONTAINER').css('display', 'none');
     $('#main_container').css('display', 'block');
-    renderImages();
+
   });
+
+  renderImages(cities_or_countries);
 
 
   //************* Modals
@@ -148,15 +150,105 @@
 
   //console.log(cities_or_countries);
 
-  function renderImages() {
-    const div = document.createElement('div');
-    div.setAttribute('class','image_box');
-    const img = document.createElement('img');
-    img.setAttribute('class','image_box');
 
+
+  function renderImages(array) {
+
+    const image_container = document.getElementsByClassName('image_container')[0];
+    image_container.innerHTML = '';
+    for(let i = 0; i < array.length; i++) {
+      let div = document.createElement('div');
+      div.setAttribute('class', 'image_box');
+      div.innerHTML = `<img src="${array[i].image}" alt="${array[i].title}" data="${array[i].id}" style="width:118px; height:118px" class="image_box_img"/>
+                       <span class="image_title">${array[i].title}</span>
+                       <span class="image_subtitle">${array[i].subtitle}</span>
+                       <img src="${array[i].check}" alt="${array[i].title}" class="image_check" />
+                      `;
+      image_container.appendChild(div);
+    }
   }
 
-  renderImages();
+  let selected_array = [];
+  let items_left_to_select = 3;
+  const selects_to_left = document.getElementsByClassName('selects_to_left')[0];
+  selects_to_left.innerHTML = 'Select 3 More';
+
+
+  $('.image_box').on('click', assignClickToImages);
+
+  function assignClickToImages() {
+    const ind = $(this)[0].children[0].attributes.data.value;
+
+    if ($(this)[0].children[3].style.visibility === 'visible') {
+      $(this)[0].children[3].style.visibility = 'hidden';
+      if (selected_array.indexOf(ind) > -1) {
+        let ind_to_splice = selected_array.indexOf(ind);
+        selected_array.splice(ind_to_splice, 1);
+        selects_to_left.innerHTML = `Select ${3 - selected_array.length} More`;
+        $('.selects_to_left').off('click');
+      }
+    } else {
+      $(this)[0].children[3].style.visibility = 'visible';
+      if (selected_array.indexOf(ind) === -1) {
+
+        selected_array.push(ind);
+        selects_to_left.innerHTML = `Select ${3 - selected_array.length} More`;
+        if (selected_array.length === 3) {
+          selects_to_left.innerHTML = 'Next';
+          $('.selects_to_left').on('click', function(e) {
+            console.log('NEXT!');
+          })
+        }
+      }
+    }
+  }
+
+
+
+  $('.search_input').on('keyup', function(e) {
+    let search_value = this.value;
+    if (search_value === '' ) {
+      renderImages(cities_or_countries);
+    } else {
+      let filtredArray = cities_or_countries.filter(item => {
+        return item.title.toUpperCase().indexOf(search_value.toUpperCase()) > -1;
+      })
+      renderImages(filtredArray);
+      assignClickToImages();
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
